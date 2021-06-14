@@ -44,7 +44,7 @@ public class ChunkSpawner {
 	private List<ChunkSpawn> chunkSpawnToBeProcessed = new ArrayList<ChunkSpawner.ChunkSpawn>();
 
 	@SubscribeEvent
-	public void performChunkSpawning(ServerTickEvent serverTickEvent) {
+	public void onServerTick(ServerTickEvent serverTickEvent) {
 		if (serverTickEvent.phase.END == Phase.END) {
 			List<ChunkSpawn> chunksToSpawn = new ArrayList<ChunkSpawner.ChunkSpawn>(chunkSpawnToBeProcessed);
 			chunkSpawnToBeProcessed.clear();

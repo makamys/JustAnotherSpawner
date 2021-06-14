@@ -42,7 +42,9 @@ public class MVELProfile implements Profile {
 		EventSpawnTrigger spawnTrigger = new EventSpawnTrigger(this);
 		MinecraftForge.EVENT_BUS.register(spawnTrigger);
 		FMLCommonHandler.instance().bus().register(spawnTrigger);
-		MinecraftForge.TERRAIN_GEN_BUS.register(new ChunkSpawner(biomeBlacklist));
+		ChunkSpawner chunkSpawner = new ChunkSpawner(biomeBlacklist);
+		FMLCommonHandler.instance().bus().register(chunkSpawner);
+		MinecraftForge.TERRAIN_GEN_BUS.register(chunkSpawner);
 		FMLCommonHandler.instance().bus().register(new SpawnerTicker(biomeBlacklist));
 		MinecraftForge.EVENT_BUS.post(new CompatibilityRegistrationEvent(new CompatabilityRegister()));
 	}
