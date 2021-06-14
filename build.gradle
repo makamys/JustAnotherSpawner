@@ -23,7 +23,7 @@ version = "0.17.8"
 group = "com.tarion.jas"
 archivesBaseName = "JustAnotherSpawner"
 def rType = "release"
-
+/*
 curse {
     projectId = '228952'
     apiKey = project.curseForgeApiKey
@@ -33,7 +33,7 @@ curse {
     additionalArtifact "$project.buildDir/libs/" + project.archivesBaseName + "-" + project.version + "-sources.jar"
     relatedProject 'jas-compatability-addon': 'optionalLibrary'
 }
-
+*/
 repositories {
 	//mavenCentral()
 	//maven {
@@ -99,7 +99,7 @@ task sourceJar(type: Jar, dependsOn:["sourceMainJava", "generateChangelog"]) {
     from "build/sources/java", "CHANGELOG.md", "README.md" 
     classifier = 'sources'
 }
-
+/*
 task configureChangelog(dependsOn: generateChangelog) {
 	def CHARS = file('CHANGELOG_MOST_RECENT.md').text
 	def MAX_CHAR = 40000
@@ -107,4 +107,5 @@ task configureChangelog(dependsOn: generateChangelog) {
     CHARS = CHARS.substring(0, maxLength)
 	curse.changelog = CHARS
 }
-curse.dependsOn configureChangelog
+*/
+//curse.dependsOn configureChangelog
