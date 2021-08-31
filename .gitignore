@@ -9,3 +9,5 @@
 gradle.properties
 CHANGELOG.md
 CHANGELOG_MOST_RECENT.md
+
+libs/
