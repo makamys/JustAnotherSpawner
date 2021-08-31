@@ -86,7 +86,7 @@ processResources {
 }
 
 task generateChangelog(type : Exec) {
-    commandLine "GEN-CHANGELOG.bat"
+    commandLine "sh", "GEN-CHANGELOG.sh"
 }
 
 task addInfoToJar(dependsOn: generateChangelog, type: Copy) {
