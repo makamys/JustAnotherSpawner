@@ -22,7 +22,7 @@ apply plugin: 'java'
 apply plugin: 'forge'
 //apply plugin: 'curseforge'
 
-version = "0.17.8"
+version = "0.17.9-maka"
 group = "com.tarion.jas"
 archivesBaseName = "JustAnotherSpawner"
 def rType = "release"
